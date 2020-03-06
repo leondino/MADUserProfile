@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">User Profile</string>
+    <string name="spalsh_text">User Profile Kotlin</string>
+    <string name="splash_image_desc">splash image</string>
 </resources>
