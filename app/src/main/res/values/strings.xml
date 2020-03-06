@@ -9,4 +9,5 @@
     <string name="description">Description</string>
     <string name="profile_image">Profile Image</string>
     <string name="name">%1$s %2$s</string>
+    <string name="profile_title">This is your profile!</string>
 </resources>
