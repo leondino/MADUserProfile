@@ -25,7 +25,7 @@ class CreateProfileActivity : AppCompatActivity() {
             when(requestCode) {
                 GALLERY_REQUEST_CODE -> {
                     profileImageUri = data?.data
-                    imageViewProfile.setImageURI(profileImageUri)
+                    profileImage.setImageURI(profileImageUri)
                 }
             }
         }
@@ -33,11 +33,25 @@ class CreateProfileActivity : AppCompatActivity() {
 
     private fun initViews(){
         galleryButton.setOnClickListener { onGalleryClick() }
+        confirmButton.setOnClickListener { onConfirmClick() }
     }
 
     private fun onGalleryClick(){
         val galleryIntent = Intent(Intent.ACTION_PICK)
         galleryIntent.type = "image/*"
         startActivityForResult(galleryIntent, GALLERY_REQUEST_CODE)
+    }
+
+    private fun onConfirmClick(){
+        val profile = Profile(
+            etFirstName.text.toString(),
+            etLastName.text.toString(),
+            etDescription.text.toString(),
+            profileImageUri
+        )
+
+        val profileActivityIntent = Intent(this, ProfileActivity::class.java)
+        profileActivityIntent.putExtra(ProfileActivity.PROFILE_EXTRA, profile)
+        startActivity(profileActivityIntent)
     }
 }
