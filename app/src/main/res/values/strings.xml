@@ -2,4 +2,9 @@
     <string name="app_name">User Profile</string>
     <string name="spalsh_text">User Profile Kotlin</string>
     <string name="splash_image_desc">splash image</string>
+    <string name="gallery_button_text">OPEN PICTURE GALLERY</string>
+    <string name="confirm_button">CONFIRM</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="description">Description</string>
 </resources>
